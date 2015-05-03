@@ -1,0 +1,25 @@
+function (slideScreens) {
+		var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+			body = document.body;
+	
+		showRight.onclick = function() {
+			classie.toggle( this, 'active' );
+			classie.toggle( menuRight, 'cbp-spmenu-open' );
+			disableOther( 'showRight' );
+		};
+		showRight2.onclick = function() {
+			classie.toggle( this, 'active' );
+			classie.toggle( menuRight, 'cbp-spmenu-open' );
+			disableOther( 'showRight2' );
+		};
+		showRight3.onclick = function() {
+			classie.toggle( this, 'active' );
+			classie.toggle( menuRight, 'cbp-spmenu-open' );
+			disableOther( 'showRight2' );
+		};
+		closeRight.onclick = function() {
+			classie.toggle( this, 'active' );
+			classie.toggle( menuRight, 'cbp-spmenu-open' );
+			disableOther( 'closeRight' );
+		};
+}

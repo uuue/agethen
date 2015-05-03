@@ -1,0 +1,698 @@
+
+
+/* media queries */
+
+/* comments */
+
+/* res1 */
+
+@media screen and (min-width: 1025px){
+	.homeimg {
+		height:70%;
+	}
+	.strip {
+		top:70%;
+	}
+	#hometext {
+		top:80%;
+	}
+	.contact-bar h2 {
+	display:none;
+	}
+	.close {
+	position:absolute;
+	right:65px;
+	top:20px;
+	}
+	#mobilitaet {
+	padding:0 50px;
+	}
+	#footer {
+	padding:30px 50px;
+	}
+	.headline {
+	font-size:60px;
+	line-height:65px;
+	width:60% !important;
+	margin:50px 0 20px;
+	}
+	#auto {
+	height:70%;
+	}
+	.asterisc {
+	margin-bottom:50px;
+	width:25% !important;
+	}
+}
+@media screen and (min-width: 768px) and (max-height: 800px){
+	.headline {
+	font-size: 45px;
+	line-height:50px;
+	}
+	#mobilitaet {
+	height:auto;
+	}
+	#footer {
+	height:60%;
+	min-height:500px;
+	}
+	.asterisc {
+	display:inline-block;
+	margin-left:20px;
+	}
+}
+/* res2 */
+	
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.homeimg {
+		height:60%;
+	}
+	.strip {
+		top:60%;
+	}
+	#mainmenu_home {
+		padding:10px 50px;
+	}
+	#mainmenu_home li {
+		font-size:17px;
+	}
+	#mainmenu_home li a {
+		color: rgba(46, 55, 127, 1);
+		padding-right:23px;
+	}
+	.home-icons .menu-icon {
+	}
+	#hometext {
+		top:70%;
+		font-size:16px;
+	}
+	.contact-bar h2 {
+	display:none;
+	}
+	.close {
+	position:absolute;
+	right:65px;
+	top:20px;
+	}
+	.headline {
+	font-size:50px;
+	line-height:54px;
+	width:70%;
+	margin:50px 0 20px;
+	}
+	#auto {
+	height:60%;
+	}
+	.asterisc {
+	margin-bottom:50px;
+	width:25%;
+	}
+	.leistungen {
+	width:35%;
+	}
+	.kontakte {
+	width:65%;
+	}
+}
+
+/* res3 */
+	
+@media screen and (min-width: 481px) and (max-width: 767px){
+
+	#section0, #section0 .fp-tableCell, #section5, #section5 .fp-tableCell {
+	height:auto !important;
+}
+	.homeimg {
+	position:relative;
+	height:60%;
+	min-height:500px;
+	}
+	.phone {
+		top:40px;
+		right:40px;
+		font-size:25px;
+		font-weight:700;
+		color:rgba(255,255,255,1);
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+		box-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+		border: 2px solid rgba(255,255,255,0.25);
+		background: rgba(255,255,255,0.75);
+		border-radius:3px;
+		padding:0 7px 2px;
+		z-index:200;
+	}
+	#logo-freiewerkstatt {
+		display:none;
+	}
+	#logo, #freiewerkstatt {
+		display:inherit;
+		position:absolute;
+		z-index:200;
+	}
+	#logo-wrapper {
+	position:relative;
+	}
+	#logo {
+		width:80%;
+		bottom:50px;
+	}
+	#freiewerkstatt {
+		position:fixed;
+		width:150px;
+		top:30px;
+		left:30px;
+	}
+	#mainmenu_home {
+		padding:10px 40px;
+	}
+	#mainmenu_home li {
+		font-size:20px;
+		line-height:30px;
+		width:250px;
+	}
+	.menu-br-hide {
+		display:inline;
+	}
+	.home-icons {
+	position:absolute;
+	top:10px;
+	right:40px;
+	height:100%;
+	}
+	.home-icons .menu-icon {
+	}
+	.strip {
+	position:relative;
+	min-height:50px;
+	top:inherit;
+	}
+	.strip li {
+	min-height:50px;
+	}
+	#hometext {
+	position:relative;
+	top:inherit;
+	height:auto;
+	padding:30px 40px;
+	font-size:14px;
+	}
+	
+	#mainmenu li { display: none; }
+	#mainmenu li.active { display: block; }
+	
+	.close {
+	}
+	.fp-controlArrow.fp-prev {
+		left:40px
+	}
+	.fp-controlArrow.fp-next {
+		right:40px
+	}
+	.caption {
+		position:absolute;
+		bottom:0;
+	}
+	.caption p {
+		cursor:pointer;
+	}
+	.contact-bar {
+		position:fixed;
+		z-index:1000;
+		overflow:auto;
+		display:none;
+		top:0;
+		bottom:auto;
+		height:100%;
+  		-webkit-overflow-scrolling: touch;
+  	}
+	.contact-bar h2 {
+	position:fixed;
+	z-index:1001;
+	top:75px;
+	right:63px;
+	font-size:150%;
+	font-weight:300;
+	text-align:right;
+	color:rgba(255,255,255,1);
+	transform: rotate(-90deg);
+	transform-origin: right top;
+	-webkit-transform: rotate(-90deg);
+	-webkit-transform-origin: right top;
+	}
+	.leistungen {
+	display:block;
+	left:0;
+	right:0;
+	width:auto;
+	padding:30px 90px 30px 30px;
+	}
+	.kontakte {
+	display:block;
+	left:0;
+	right:0;
+	width:auto;
+	padding:30px 90px 30px 30px;
+	width:100%;
+	padding-right:0;
+	}
+	#mobilitaet {
+	height:auto;
+	padding:30px 40px;
+	}
+	#footer {
+	height:auto;
+	font-size:12px;
+	line-height:15px;
+	padding:25px 40px;
+	display:inline-block;
+	}
+	.headline {
+	font-size:40px;
+	line-height:43px;
+	margin:0 0 20px;
+	width:inherit;
+	}
+	.asterisc {
+	margin-bottom:0;
+	width:30%;
+	}
+	#auto {
+	height:50%;
+	}
+	.col_2 {
+	}
+	.col_3 {
+		margin-right:40px;
+	}
+	#impressum {
+	padding:0 40px;
+	}
+	#impressum h3 {
+		margin-top:40px;
+	}
+	#impressum p:last-child {
+		margin-bottom:40px;
+	}
+}
+
+/* res4 */
+	
+@media screen and (max-width: 480px),
+screen and (max-height: 400px) {
+
+	#section0, #section0 .fp-tableCell, #section1, #section1 .section, #section2, #section2 .section, #section3, #section3 .section, #section4, #section4 .section {
+	height:auto !important;
+}
+	.homeimg {
+	position:relative;
+	height:400px;
+	background-position:center 60px; 
+	-webkit-background-size: auto 80%;
+	-moz-background-size: auto 80%;
+	-o-background-size: auto 80%;
+	background-size: auto 72%;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	}
+	.phone-icon {
+	position:relative;
+	height:60px;
+	cursor:pointer;
+	}
+	.phone {
+		position:absolute;
+		display:block;
+		top:0;
+		bottom:0;
+		left:0;
+		right:80px;
+		font-size:25px;
+		font-weight:400;
+		color:#000;
+		background:rgb(227, 164, 23);
+		border:none;
+		border-radius:0;
+		z-index:200;
+		text-align:center;
+		border-sizing:border-box;
+		padding:13px 0 0;
+		text-shadow:none;
+	}
+	.phone:hover {
+		color:#000;
+		background:rgb(227, 164, 23);
+		text-shadow:none;
+	}
+	#showRight3 {
+		position:absolute;
+		top:0;
+		right:0;
+		width:34px;
+		height:34px;
+		display:block;
+		padding:8px 23px 18px;
+		fill:rgb(227, 164, 23) !important;
+		box-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+		background:#000;
+		z-index:200;
+	}
+	.close-right {
+		position:absolute;
+		top:0;
+		right:0;
+		width:34px;
+		height:34px;
+		display:block;
+		padding:13px 23px;
+		fill:#000;
+		background:rgb(227, 164, 23) !important;
+	}
+	#logo-freiewerkstatt {
+		display:none;
+	}
+	#logo, #freiewerkstatt {
+		display:inherit;
+		position:absolute;
+		z-index:200;
+	}
+	#logo-wrapper {
+		position:relative;
+		z-index:1000;
+		left:0;
+		right:0;
+	}
+	#logo {
+		width:100%;
+		bottom:20px;
+	}
+	#freiewerkstatt {
+		position:relative;
+		width:100%;
+		margin-top:20px;
+	}
+	#mainmenu_home {
+		padding:0 30px;
+		background:none;
+		left:0;
+		right:0;
+	}
+	#mainmenu_home ul {
+	}
+	#mainmenu_home li {
+		display:block;
+		height:auto;
+		margin:0 -30px;
+		text-indent:20px;
+		float:none;
+		font-size:20px;
+		line-height:20px;
+		background: -webkit-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 1) 100%);
+		background: -o-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 1) 100%);
+		background: -moz-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 1) 100%);
+		background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 1) 100%);
+	}
+	#mainmenu_home li {
+	border-left:10px solid;
+	}
+	.mmh-karosserie {
+	border-left-color:rgb(175, 26, 28) !important;
+	}
+	.mmh-kfz {
+	border-color:rgb(227, 164, 23) !important;
+	}
+	.mmh-autolack {
+	border-color:rgb(0, 157, 224) !important;
+	}
+	.mmh-beschriftung {
+	border-color:rgb(104, 163, 64) !important;
+	}
+	#mainmenu_home li a {
+		display:block;
+		padding:11px 0 10px;
+		left:0;
+		right:0;
+		width:100%;
+	}
+	#mainmenu_home li a:hover {
+		background: -webkit-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 0.2) 100%);
+		background: -o-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 0.2) 100%);
+		background: -moz-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 0.2) 100%);
+		background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 0.2) 100%);
+	}
+		
+	.home-icons {
+	display:none;
+	}
+	.strip {
+	display:none;
+	}
+	#hometext {
+	position:relative;
+	top:inherit;
+	height:auto;
+	padding: 30px;
+	font-size:16px;
+	}
+	
+	#mainmenu li { display: none; }
+	#mainmenu li.active { display: block; }
+	
+	.department-icon {
+	display:inherit;
+	position:relative;
+	z-index:1000;
+	height:280px;
+	width:100%;
+	background-repeat:no-repeat;
+	background-size:auto 70%;
+	background-position:center 60%;
+	padding:30px 0 10px;
+	}
+	.department-icon.karosserie {
+	background-image:url(../img/karosserie.png);
+	}
+	.department-icon.kfz {
+	background-image:url(../img/kfz-meisterbetrieb.png);
+	}
+	.department-icon.autolack {
+	background-image:url(../img/autolackierung.png);
+	}
+	.department-icon.beschriftung {
+	background-image:url(../img/beschriftung.png);
+	}
+	.fp-controlArrow {
+	width:30px !important;
+	height:90px !important;
+	margin-top:70px !important;
+	background-color:rgba(255,255,255,0.9) !important;
+	}
+	.fp-controlArrow.fp-prev {
+		left:0px;
+		border-top-left-radius:0;
+		border-top-right-radius:4px;
+		border-bottom-left-radius:0;
+		border-bottom-right-radius:4px;
+	}
+	.fp-controlArrow.fp-next {
+		right:0px;
+		border-top-left-radius:4px;
+		border-top-right-radius:0;
+		border-bottom-left-radius:4px;
+		border-bottom-right-radius:0;
+	}
+	.caption {
+		position:absolute;
+		bottom:0;
+		min-height:59px;
+		padding:0;
+		cursor:pointer;
+	}
+	.caption p {
+		color: #fff;
+		font-weight:400;
+		font-size:14px;
+		margin:15px 30px;
+		min-height:inherit;
+		max-height:50px;
+		overflow:hidden;
+		padding-right:50px;
+	}
+	.bold {
+	font-weight:700;
+	}
+	.info-icon-wrapper {
+		width:40px;
+		height:auto;
+		margin:15px 30px;
+	}
+	.info-word {
+	padding:5px 0;
+	font-size:80%;
+	}
+	.br-hide {
+	display:none;
+	}
+	.fo {
+	font-size:1em;
+	}
+	.contact-bar {
+		position:fixed;
+		z-index:1000;
+		overflow:auto;
+		display:none;
+		top:0;
+		bottom:auto;
+		height:100%;
+		-webkit-overflow-scrolling: touch;
+	}
+	.contact-bar h2 {
+	position:fixed;
+	z-index:1001;
+	top:75px;
+	right:63px;
+	font-size:150%;
+	font-weight:300;
+	text-align:right;
+	color:rgba(255,255,255,1);
+	transform: rotate(-90deg);
+	transform-origin: right top;
+	-webkit-transform: rotate(-90deg);
+	-webkit-transform-origin: right top;
+	}
+	.leistungen {
+	display:block;
+	left:0;
+	right:0;
+	width:auto;
+	padding:30px 90px 30px 30px;
+	}
+	.kontakte {
+	display:block;
+	left:0;
+	right:0;
+	width:auto;
+	padding:30px 90px 30px 30px;
+	width:100%;
+	padding-right:0;
+	}
+	.person-dates {
+	display:none;
+	}
+	#mobilitaet {
+	height:auto;
+	padding:50px 30px 20px;
+	}
+	#footer {
+	height:auto;
+	padding:20px 30px 30px;
+	}
+	.headline {
+	font-size:28px;
+	line-height:32px;
+	width:inherit;
+	margin:0 0 20px;
+	}
+	.asterisc {
+	margin-bottom:0;
+	width:inherit;
+	}
+	#auto {
+	display:none;
+	}
+	.col_1, .col_2, .col_3 {
+	float:none;
+	}
+	.col_2 {
+		padding-top:10px;
+		padding-right:0;
+	}
+	.col_3 {
+	}
+	.col_2 h3, .col_3 h3 {
+	padding-top:20px;
+	border-top:1px solid #222;
+	}
+	#impressum {
+	padding:0 30px;
+	background:#000;
+	}
+	#impressum h3 {
+		margin-top:30px;
+	}
+	#impressum p:last-child {
+		margin-bottom:30px;
+	}
+	dd, dt {
+	}
+	.channels > a {
+	}
+}
+
+@media screen and (orientation: landscape) {
+	#section1 #slide1 {
+	}
+	#section1 #slide2 {
+		background-position: 80% center;
+	}
+	#section1 #slide3 {
+		background-position: 80% center;
+	}
+	#section2 #slide1 {
+		background-position: 80% center;
+	}
+	#section2 #slide2 {
+		background-position: 30% center;
+	}
+	#section2 #slide3 {
+	}
+	#section2 #slide4 {
+		background-position: 60% center;
+	}
+	#section3 #slide1 {
+	}
+	#section3 #slide2 {
+		background-position: 60% center;
+	}
+	#section3 #slide3 {
+		background-position: 20% center;
+	}
+	#section3 #slide4 {
+	}
+	#section4 #slide1 {
+	}
+	#section4 #slide2 {
+	}
+	#section4 #slide3 {
+	}
+}
+	
+/* retina */
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) { 
+	.department-icon.karosserie {
+	background-image:url(../img/karosserie@x2.png);
+	}
+	.department-icon.kfz {
+	background-image:url(../img/kfz-meisterbetrieb@x2.png);
+	}
+	.department-icon.autolack {
+	background-image:url(../img/autolackierung@x2.png);
+	}
+	.department-icon.beschriftung {
+	background-image:url(../img/beschriftung@x2.png);
+	}
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 769px) { 
+}
+	
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 481px) and (max-width: 768px) { 
+}
+	
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 480px) { 
+}
+	
+/* fine media queries */
