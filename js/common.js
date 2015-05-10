@@ -154,7 +154,10 @@ $( document ).ready(function() {
 
 
 			if(app.schema === 2 || app.schema === 3){
-				contact_bar = app.$.body.prepend(contact_bar.clone()).find('> .contact-bar');
+				var elem = contact_bar.clone();
+						elem.prepend(elem.find('.leistungen'));
+
+				contact_bar = app.$.body.prepend(elem).find('> .contact-bar');
 				contact_bar.find(app.elements.close).click(_onClose);
 				app.$.body.css({overflow: 'hidden'})
 				contact_bar.css({bottom: 0}).show();
