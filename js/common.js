@@ -35,8 +35,19 @@ $( document ).ready(function() {
 	var app = app || {};
 
 	app.elements = {
+			body: 'body',
 			icon_wrapper: '.info-icon-wrapper',
-			close: '.close'
+			close: '.close',
+			btn_show_map: '.b_map',
+			btn_close_map: '#closeMap',
+			map: '#map',
+			i_map: '#iMap'
+	};
+
+	app.$ = {};
+
+	for(var k in app.elements){
+		app.$[k] = $(app.elements[k]);
 	};
 
 	app.toggleText = function( max_length ){
@@ -78,8 +89,36 @@ $( document ).ready(function() {
 			});
 	};
 
+	app.bindMap = function(){
+		/* Questo é map related */
+		app.$.btn_show_map.on('click', function(){
+			app.$.map.css({visibility: 'visible', opacity: 1});
+			app.$.imap.css({visibility: 'visible', opacity: 1});
+			app.$.body.css("overflow","hidden");
+		});
+
+		app.$.btn_close_map.on('click', function(){
+			app.$.map.css({visibility: 'hidden', opacity: 1});
+			app.$.imap.css({visibility: 'hidden', opacity: 1});
+			app.$.body.css("overflow","auto");
+		});
+	};
+
 	app.bindElOnStarts = function(){
 			if(typeof app.schema === 'undefined') return false;
+
+
+			$('input, textarea').jvFloat();
+
+			$('#fullpage').fullpage({
+				sectionsColor: [],
+				anchors: ['home', 'page1', 'page2', 'page3', 'page4', 'page5', 'a-feedback'],
+				menu: '#mainmenu',
+				loopTop: true,
+				loopBottom: true,
+				responsive: 767,
+			});
+
 			// Collego il pulsante Home alla prima <section>
 			$('#home-4-icon').on('click', function(){
 				$.fn.moveTo(1);
@@ -105,18 +144,6 @@ $( document ).ready(function() {
 				$( "#mainmenu > li[data-index='"+$(this).attr('data-index')+"']" ).addClass('active');
 			});
 
-			$(".b_map").on('click', function(){
-				$("#map").css("visibility","visible");
-				$("#iMap").css("visibility","visible");
-				$("body").css("overflow","hidden");
-			});
-
-			$("#closeMap").on('click', function(){
-				$("#map").css("visibility","hidden");
-				$("#iMap").css("visibility","hidden");
-				$("body").css("overflow","auto");
-			});
-
 			$(".b_impressum").on('click', function(){
 				$("#impressum").css("visibility","visible");
 				$("body").css("overflow","hidden");
@@ -132,7 +159,8 @@ $( document ).ready(function() {
 				var contact_id = "#" + $(this).attr("id").substring(5);
 				$(contact_id).toggle();
 
-				// CASE 2
+				console.log(contact_id);
+
 				if(app.schema === 2){
 					$("body").css("overflow","hidden");
 					var contact_id = "#" + $(this).attr("id").substring(5);
@@ -168,6 +196,7 @@ $( document ).ready(function() {
 
 			$( app.elements.close ).click(function() {
 				$(this).parents(".contact-bar").hide();
+				$("body").css("overflow","visible");
 			});
 
 	};

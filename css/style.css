@@ -812,3 +812,7 @@ input[type=submit]::first-letter {
 .opentext.spoiler.expanded .read-more{
   display: none;
 }
+
+#map{
+	opacity: 0;
+}
