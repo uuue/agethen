@@ -815,4 +815,23 @@ input[type=submit]::first-letter {
 
 #map{
 	opacity: 0;
+	z-index: -1;
+	left: -2000px;
+}
+.showMap #map {
+	opacity: 1;
+	z-index: 1000;
+	left: 0;
+	visibility: visible;
+}
+#impressum{
+	opacity: 0;
+	z-index: -1;
+	left: -2000px;
+}
+.showImpressum #impressum {
+	opacity: 1;
+	z-index: 1000;
+	left: 0;
+	visibility: visible;
 }
