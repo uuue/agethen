@@ -132,13 +132,19 @@ $( document ).ready(function() {
 	};
 
 
+	app.cleanUpProfileTab = function(){
+			var body = $('body')
+			body.find('.contact-bar').hide();
+			body.css("overflow","visible");
+			var body_contact_bar = body.find('> .contact-bar');
+			if(body_contact_bar.length > 0) body_contact_bar.remove();
+	};
+
 	app.bindProfileTab = function(){
 		var _onClose = function(e){
 				e.preventDefault();
 				$(this).parents(".contact-bar").hide();
-				app.$.body.css("overflow","visible");
-				var body_contact_bar = app.$.body.find('> .contact-bar');
-				if(body_contact_bar.length > 0) body_contact_bar.remove();
+				app.cleanUpProfileTab();
 				return false;
 		};
 
@@ -234,8 +240,11 @@ $( document ).ready(function() {
 
 	app.onResizeWindow = function(){
 
-		var bw = $('body').width(); //Body Width
+		var bw = app.$.body.width(),//Body Width
+		 		isChange = false;
 
+		if(typeof app.isFirstTime === 'undefined') app.isFirstTime = false;
+		;
 		if(!app.schema) app.schema = 1;
 		switch(true){
 
@@ -265,6 +274,12 @@ $( document ).ready(function() {
 			break;
 
 		};
+
+		if(!app.isFirstTime) {
+			app.isFirstTime = true;
+			return true;
+		}
+		app.cleanUpProfileTab();
 	};
 
 	app.init = function(){
