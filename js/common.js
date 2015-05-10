@@ -113,9 +113,8 @@ $( document ).ready(function() {
 			v = 'visible';
 			ov = 'hidden';
 		}
-		app.$.map.css({visibility: v, opacity: op});
-		app.$.i_map.css({visibility: v, opacity: op});
-		app.$.body.css("overflow", ov);
+		app.$.i_map.css({visibility: v, opacity: op, 'z-index': op});
+		app.$.body.css("overflow", ov).toggleClass('showMap',visible);
 
 		return false;
 	};
@@ -214,12 +213,12 @@ $( document ).ready(function() {
 
 			$(".b_impressum").on('click', function(){
 				$("#impressum").css("visibility","visible");
-				$("body").css("overflow","hidden");
+				$("body").css("overflow","hidden").addClass('showImpressum');
 			});
 
 			$("#closeImpressum").on('click', function(){
 				$("#impressum").css("visibility","hidden");
-				$("body").css("overflow","auto");
+				$("body").css("overflow","auto").removeClass('showImpressum');
 			});
 
 	};
