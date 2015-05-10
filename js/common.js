@@ -84,6 +84,7 @@ $( document ).ready(function() {
 						// Add the event to do the toggle class
 						$elem.unbind('click');
 						$elem.on('click', function(e){
+							if(!max_length) return false;
 							e.preventDefault();
 							$elem.toggleClass('expanded');
 							if($elem.hasClass('expanded')){
