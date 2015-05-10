@@ -105,7 +105,7 @@ $( document ).ready(function() {
 			ov = 'hidden';
 		}
 		app.$.map.css({visibility: v, opacity: op});
-		app.$.imap.css({visibility: v, opacity: op});
+		app.$.i_map.css({visibility: v, opacity: op});
 		app.$.body.css("overflow", ov);
 
 		return false;
