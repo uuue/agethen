@@ -89,24 +89,43 @@ $( document ).ready(function() {
 			});
 	};
 
+	// Hide and show map function
+	app.showMap = function(e, visible){
+		e.preventDefault();
+
+		visible = visible || false;
+
+		var op = 0, // opacity
+				v = 'hidden', // visible
+				ov = 'auto'; // overflow
+
+		if(visible){
+			op = 1;
+			v = 'visible';
+			ov = 'hidden';
+		}
+		app.$.map.css({visibility: v, opacity: op});
+		app.$.i_map.css({visibility: v, opacity: op});
+		app.$.body.css("overflow", ov);
+
+		return false;
+	};
+
 	app.bindMap = function(){
 		/* Questo é map related */
-		app.$.btn_show_map.on('click', function(){
-			app.$.map.css({visibility: 'visible', opacity: 1});
-			app.$.imap.css({visibility: 'visible', opacity: 1});
-			app.$.body.css("overflow","hidden");
+		app.$.btn_show_map.on('click', function(e){
+			app.showMap(e, true);
 		});
 
-		app.$.btn_close_map.on('click', function(){
-			app.$.map.css({visibility: 'hidden', opacity: 1});
-			app.$.imap.css({visibility: 'hidden', opacity: 1});
-			app.$.body.css("overflow","auto");
+		app.$.btn_close_map.on('click', function(e){
+			app.showMap(e, false);
 		});
 	};
 
 	app.bindElOnStarts = function(){
 			if(typeof app.schema === 'undefined') return false;
 
+			app.bindMap();
 
 			$('input, textarea').jvFloat();
 
