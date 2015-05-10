@@ -131,10 +131,41 @@ $( document ).ready(function() {
 		});
 	};
 
+
+	app.bindProfileTab = function(){
+		var _onClose = function(e){
+				e.preventDefault();
+				$(this).parents(".contact-bar").hide();
+				app.$.body.css("overflow","visible");
+				var body_contact_bar = app.$.body.find('> .contact-bar');
+				if(body_contact_bar.length > 0) body_contact_bar.remove();
+				return false;
+		};
+
+		$( app.elements.icon_wrapper ).click(function() {
+			var contact_id = "#" + $(this).attr("id").substring(5),
+					contact_bar = $(contact_id);
+
+
+			if(app.schema === 2 || app.schema === 3){
+				contact_bar = app.$.body.prepend(contact_bar.clone()).find('> .contact-bar');
+				contact_bar.find(app.elements.close).click(_onClose);
+				app.$.body.css({overflow: 'hidden'})
+				contact_bar.css({bottom: 0}).show();
+			}else{
+				$(this).closest('.bottom-bar').find('.contact-bar').toggle();
+			}
+
+		});
+
+		app.$.close.click(_onClose);
+	};
+
 	app.bindElOnStarts = function(){
 			if(typeof app.schema === 'undefined') return false;
 
 			app.bindMap();
+			app.bindProfileTab();
 
 			$('input, textarea').jvFloat();
 
@@ -180,49 +211,6 @@ $( document ).ready(function() {
 			$("#closeImpressum").on('click', function(){
 				$("#impressum").css("visibility","hidden");
 				$("body").css("overflow","auto");
-			});
-
-			// CASE 0 and 1
-			$( app.elements.icon_wrapper ).click(function() {
-				var contact_id = "#" + $(this).attr("id").substring(5);
-				$(contact_id).toggle();
-
-				if(app.schema === 2){
-					$("body").css("overflow","hidden");
-					var contact_id = "#" + $(this).attr("id").substring(5);
-
-					var contact_bar = $(contact_id);
-					var leistungen = $(this).parents(".section").find('.leistungen');
-					var kontakte = $(this).parents(".section").find('.kontakte');
-
-					//$(this).parents("section").before(contact_bar);
-					$('body').prepend(contact_bar);
-
-					contact_bar.css("bottom","0");
-					kontakte.before(leistungen);
-					contact_bar.show();
-				}
-
-				if(app.schema === 3){
-					var contact_id = "#" + $(this).attr("id").substring(5);
-					var contact_bar = $(contact_id);
-					var leistungen = $(this).parents(".section").find('.leistungen');
-					var kontakte = $(this).parents(".section").find('.kontakte');
-
-					//$(this).parents("section").before(contact_bar);
-					$('body').prepend(contact_bar);
-
-					contact_bar.css("bottom","0");
-					kontakte.before(leistungen);
-					contact_bar.show();
-					$("body").css("overflow","hidden");
-				}
-
-			});
-
-			$( app.elements.close ).click(function() {
-				$(this).parents(".contact-bar").hide();
-				$("body").css("overflow","visible");
 			});
 
 	};
