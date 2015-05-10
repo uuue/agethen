@@ -50,6 +50,9 @@ $( document ).ready(function() {
 		app.$[k] = $(app.elements[k]);
 	};
 
+	// This function is encharge to collapse text based on the resolution
+	// of the screen and the max_length of chars allow
+	// if max_length is not passed then the text is expanded
 	app.toggleText = function( max_length ){
 			// For each openText in the page.
 			$('.opentext').each(function(index, elem){
@@ -71,7 +74,12 @@ $( document ).ready(function() {
 
 						// Add class spoiler to show and hide the button
 						$elem.addClass('spoiler').removeClass('expanded');
-						if(max_length) replace_short_text();
+						if(max_length){
+							replace_short_text();
+						}else{
+						  $elem.addClass('expanded');
+							$text_cont.text(original_text);
+						}
 
 						// Add the event to do the toggle class
 						$elem.unbind('click');
@@ -178,8 +186,6 @@ $( document ).ready(function() {
 				var contact_id = "#" + $(this).attr("id").substring(5);
 				$(contact_id).toggle();
 
-				console.log(contact_id);
-
 				if(app.schema === 2){
 					$("body").css("overflow","hidden");
 					var contact_id = "#" + $(this).attr("id").substring(5);
@@ -220,6 +226,23 @@ $( document ).ready(function() {
 
 	};
 
+	app.pageToggler = function(){
+		// Ci sono cose che non ti domandi perché
+		if( $('#page2').find('#contact_2').length == 0 ){
+			$('#page2').find('.bottom-bar').append($('#contact_2'));
+		}
+		if( $('#page3').find('#contact_3').length == 0 ){
+			$('#page3').find('.bottom-bar').append($('#contact_3'));
+		}
+		if( $('#page4').find('#contact_4').length == 0 ){
+			$('#page4').find('.bottom-bar').append($('#contact_4'));
+		}
+		if( $('#page5').find('#contact_5').length == 0 ){
+			$('#page5').find('.bottom-bar').append($('#contact_5'));
+		}
+
+	};
+
 	app.onResizeWindow = function(){
 
 		var bw = $('body').width(); //Body Width
@@ -230,36 +253,23 @@ $( document ).ready(function() {
 			case bw >= 1024:
 				if(app.schema === 0) return false;
 				app.schema = 0;
+				app.toggleText();
 			break;
 
 			case bw >= 768 && bw < 1024:
 				if(app.schema === 1) return false;
 				app.schema = 1;
+				app.toggleText();
 			break;
 
 			case bw >= 481 && bw < 768:
 				if(app.schema === 2) return false;
 				app.schema = 2;
 				app.toggleText(160);
-
-				// Ci sono cose che non ti domandi perché
-				if( $('#page2').find('#contact_2').length == 0 ){
-					$('#page2').find('.bottom-bar').append($('#contact_2'));
-				}
-				if( $('#page3').find('#contact_3').length == 0 ){
-					$('#page3').find('.bottom-bar').append($('#contact_3'));
-				}
-				if( $('#page4').find('#contact_4').length == 0 ){
-					$('#page4').find('.bottom-bar').append($('#contact_4'));
-				}
-				if( $('#page5').find('#contact_5').length == 0 ){
-					$('#page5').find('.bottom-bar').append($('#contact_5'));
-				}
-
-
+				app.pageToggler();
 			break;
 
-			case bw >= 480:
+			case bw < 481:
 				if(app.schema === 3) return false;
 				app.schema = 3;
 				app.toggleText(80);
