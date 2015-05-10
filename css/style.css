@@ -835,3 +835,6 @@ input[type=submit]::first-letter {
 	left: 0;
 	visibility: visible;
 }
+.placeHolder.active {
+	display: none !important;
+}
