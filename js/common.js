@@ -1,36 +1,3 @@
-//esecuzioni a dom pronto
-$( document ).ready(function() {
-
-	var menuRight = document.getElementById( 'cbp-spmenu-s2' );
-
-	showRight.onclick = function() {
-		classie.toggle( this, 'active' );
-		classie.toggle( menuRight, 'cbp-spmenu-open' );
-		//disableOther( 'showRight' );
-		$("body").css("overflow","hidden");
-	};
-	showRight2.onclick = function() {
-		classie.toggle( this, 'active' );
-		classie.toggle( menuRight, 'cbp-spmenu-open' );
-		//disableOther( 'showRight2' );
-		$("body").css("overflow","hidden");
-	};
-	showRight3.onclick = function() {
-		classie.toggle( this, 'active' );
-		classie.toggle( menuRight, 'cbp-spmenu-open' );
-		//disableOther( 'showRight2' );
-		$("body").css("overflow","hidden");
-    };
-	closeRight.onclick = function() {
-		classie.toggle( this, 'active' );
-		classie.toggle( menuRight, 'cbp-spmenu-open' );
-		//disableOther( 'closeRight' );
-		$("body").css("overflow","auto");
-	};
-
-});
-
-
 (function(w, d, $){
 	var app = app || {};
 
@@ -41,7 +8,11 @@ $( document ).ready(function() {
 			btn_show_map: '.b_map',
 			btn_close_map: '#closeMap',
 			map: '#map',
-			i_map: '#iMap'
+			i_map: '#iMap',
+			
+			menu: '#cbp-spmenu-s2',
+			showMenu: '#showRight, #showRight2, #showRight3',
+			closeMenu: '#closeRight'
 	};
 
 	app.$ = {};
@@ -169,11 +140,24 @@ $( document ).ready(function() {
 		app.$.close.click(_onClose);
 	};
 
+	app.bindMenu = function(){
+		app.$.showMenu.on('click', function(e){
+			$(this).addClass('active');
+			app.$.addClass('cbp-spmenu-open');
+		});
+
+		app.$.closeMenu.on('click', function(e){
+			app.$.showMenu.removeClass('active');
+			app.$.removeClass('cbp-spmenu-open');
+		});
+	};
+
 	app.bindElOnStarts = function(){
 			if(typeof app.schema === 'undefined') return false;
 
 			app.bindMap();
 			app.bindProfileTab();
+			app.bindMenu();
 
 			$('input, textarea').jvFloat();
 
@@ -206,6 +190,7 @@ $( document ).ready(function() {
 
 			// Gestione del menu laterale
 			$('#cbp-spmenu-s2 > a').on('click', function(){
+				// @todo mauro: MoveTo not found in ie9
 				$.fn.moveTo(parseInt($(this).attr('data-index')) + 1);
 				$('#mainmenu > li').removeClass('active');
 				$( "#mainmenu > li[data-index='"+$(this).attr('data-index')+"']" ).addClass('active');
