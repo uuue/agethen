@@ -9,7 +9,7 @@
 			btn_close_map: '#closeMap',
 			map: '#map',
 			i_map: '#iMap',
-			
+
 			menu: '#cbp-spmenu-s2',
 			showMenu: '#showRight, #showRight2, #showRight3',
 			closeMenu: '#closeRight'
@@ -143,12 +143,12 @@
 	app.bindMenu = function(){
 		app.$.showMenu.on('click', function(e){
 			$(this).addClass('active');
-			app.$.addClass('cbp-spmenu-open');
+			app.$.menu.addClass('cbp-spmenu-open');
 		});
 
 		app.$.closeMenu.on('click', function(e){
 			app.$.showMenu.removeClass('active');
-			app.$.removeClass('cbp-spmenu-open');
+			app.$.menu.removeClass('cbp-spmenu-open');
 		});
 	};
 
