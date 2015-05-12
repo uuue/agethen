@@ -432,8 +432,10 @@ svg {
 	padding-right:80px;
     box-sizing: border-box;
 }
-.read_more {
+.read-more {
 	cursor:pointer;
+	font-weight:700;
+	color: rgba(255,255,255,1);
 }
 .info-icon-wrapper {
 	position:absolute;
@@ -746,7 +748,13 @@ input[type=submit]::first-letter {
 	z-index:1002;
 }
 #closeMap {
-	fill:black !important;
+	top:40px;
+	width:40px;
+	height:40px;
+	fill:#5F84F2 !important;
+}
+#closeMap {
+	filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.25));
 }
 #impressum h3 {
 	margin-top:50px;
