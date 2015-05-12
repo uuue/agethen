@@ -160,7 +160,8 @@
 		position:fixed;
 		width:150px;
 		top:30px;
-		left:30px;
+		margin-left:auto;
+		margin-right:auto;
 	}
 	#mainmenu_home {
 		padding:10px 40px;
@@ -265,6 +266,11 @@
 	line-height:15px;
 	padding:25px 40px;
 	display:inline-block;
+	width: 100%;
+	box-sizing: border-box;
+	}
+	#footer > * {
+		float:left;
 	}
 	.headline {
 	font-size:40px;
@@ -280,6 +286,8 @@
 	height:50%;
 	}
 	.col_2 {
+		margin-right:40px;
+		padding-right:0;
 	}
 	.col_3 {
 		margin-right:40px;
@@ -296,6 +304,25 @@
 }
 
 /* res4 */
+
+@media screen and (max-width: 480px) {
+	
+	.col_1, .col_2, .col_3 {
+	float:none;
+	}
+	.col_2 {
+		padding-top:10px;
+		padding-right:0;
+	}
+	.col_3 {
+	}
+	.col_2 h3, .col_3 h3 {
+	padding-top:20px;
+	border-top:1px solid #222;
+	}
+	
+}
+
 	
 @media screen and (max-width: 480px),
 screen and (max-height: 400px) {
@@ -310,7 +337,7 @@ screen and (max-height: 400px) {
 	-webkit-background-size: auto 80%;
 	-moz-background-size: auto 80%;
 	-o-background-size: auto 80%;
-	background-size: auto 72%;
+	background-size: auto 80%;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
@@ -379,8 +406,7 @@ screen and (max-height: 400px) {
 	#logo-wrapper {
 		position:relative;
 		z-index:1000;
-		left:0;
-		right:0;
+		width:100%;
 	}
 	#logo {
 		width:100%;
@@ -389,7 +415,11 @@ screen and (max-height: 400px) {
 	#freiewerkstatt {
 		position:relative;
 		width:100%;
+		max-width:300px;
 		margin-top:20px;
+		margin-left:auto;
+		margin-right:auto;
+		top:0;
 	}
 	#mainmenu_home {
 		padding:0 30px;
@@ -398,11 +428,13 @@ screen and (max-height: 400px) {
 		right:0;
 	}
 	#mainmenu_home ul {
+		margin:0 -30px;
 	}
 	#mainmenu_home li {
 		display:block;
 		height:auto;
-		margin:0 -30px;
+		width:100%;
+		margin:0;
 		text-indent:20px;
 		float:none;
 		font-size:20px;
@@ -411,9 +443,8 @@ screen and (max-height: 400px) {
 		background: -o-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 1) 100%);
 		background: -moz-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 1) 100%);
 		background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(203, 205, 223, 1) 100%);
-	}
-	#mainmenu_home li {
-	border-left:10px solid;
+		border-left: 10px solid;
+		box-sizing:border-box;
 	}
 	.mmh-karosserie {
 	border-left-color:rgb(175, 26, 28) !important;
@@ -426,6 +457,9 @@ screen and (max-height: 400px) {
 	}
 	.mmh-beschriftung {
 	border-color:rgb(104, 163, 64) !important;
+	}
+	.menu-br-hide {
+		display:none;
 	}
 	#mainmenu_home li a {
 		display:block;
@@ -523,12 +557,16 @@ screen and (max-height: 400px) {
 	}
 	.info-icon-wrapper {
 		width:40px;
-		height:auto;
+		height:59px;
 		margin:15px 30px;
+	}
+	.info-icon {
+	height:40px;
 	}
 	.info-word {
 	padding:5px 0;
 	font-size:80%;
+	height:10px;
 	}
 	.br-hide {
 	display:none;
@@ -599,19 +637,6 @@ screen and (max-height: 400px) {
 	}
 	#auto {
 	display:none;
-	}
-	.col_1, .col_2, .col_3 {
-	float:none;
-	}
-	.col_2 {
-		padding-top:10px;
-		padding-right:0;
-	}
-	.col_3 {
-	}
-	.col_2 h3, .col_3 h3 {
-	padding-top:20px;
-	border-top:1px solid #222;
 	}
 	#impressum {
 	padding:0 30px;
