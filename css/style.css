@@ -89,7 +89,7 @@ a {
 	bottom:0px;
 	left:50px;
 }
-#logo, #freiewerkstatt {
+#logo, #freiewerkstatt, #freiewerkstatt2 {
 	display:none;
 	}
 #mainmenu_home {
@@ -806,7 +806,7 @@ input[type=submit]::first-letter {
 }
 
 .opentext.spoiler{
-	max-height: 50px;
+	max-height: 100px;
 }
 
 .opentext.spoiler.expanded{

@@ -144,10 +144,13 @@
 	#logo-freiewerkstatt {
 		display:none;
 	}
-	#logo, #freiewerkstatt {
+	#logo {
 		display:inherit;
 		position:absolute;
 		z-index:200;
+	}
+	#freiewerkstatt {
+		display:none;
 	}
 	#logo-wrapper {
 	position:relative;
@@ -156,9 +159,11 @@
 		width:80%;
 		bottom:50px;
 	}
-	#freiewerkstatt {
-		position:fixed;
+	#freiewerkstatt2 {
+		display:inherit;
+		position:absolute;
 		width:150px;
+		left:30px;
 		top:30px;
 		margin-left:auto;
 		margin-right:auto;
@@ -212,9 +217,30 @@
 	.caption {
 		position:absolute;
 		bottom:0;
+		padding:30px 0;
 	}
 	.caption p {
 		cursor:pointer;
+		min-height:initial;
+	}
+	.info-icon-wrapper {
+		width:40px;
+		height:59px;
+		margin:30px 50px;
+	}
+	.info-icon {
+	height:40px;
+	}
+	.info-word {
+	padding:5px 0;
+	font-size:80%;
+	height:10px;
+	}
+	.br-hide {
+	display:none;
+	}
+	.fo {
+	font-size:1em;
 	}
 	.contact-bar {
 		position:fixed;
