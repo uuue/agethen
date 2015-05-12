@@ -847,3 +847,52 @@ input[type=submit]::first-letter {
 .placeHolder.active {
 	display: none !important;
 }
+
+/* thanks, error */
+html.thanks-error {
+	background: rgb(0, 157, 224);
+	padding:0 30px;
+}
+html.error {
+	background: rgb(175, 26, 28);
+}
+body.thanks-error {
+	color: #fff;
+	position: relative;
+	width:100%;
+}
+
+.content-wrapper {
+	width:90%;
+	max-width:200px;
+	margin:0 auto;
+	position:relative;
+	top:50px;
+}
+.thanks-error h1 {
+	font-weight:700;
+	font-size:70px;
+	line-height:85%;
+	margin-bottom:30px;
+}
+.error h1 {
+	font-size:60px;
+}
+body.thanks-error p {
+	margin:20px 0 20px;
+}
+.back-home {
+	margin-top:20px;
+	display: inline-block;
+	color: rgb(0, 157, 224);
+	font-weight:700;
+	background: #fff;
+	padding:10px 15px;
+	border-radius:5px;
+}
+.error .back-home {
+	color: rgb(175, 26, 28);
+}
+
+
+
