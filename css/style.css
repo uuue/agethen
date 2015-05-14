@@ -33,9 +33,6 @@ a {
 }
 
 .section .slide {
-  position: relative;
-  margin: 0 auto 0;
-  z-index: 3;
   background-repeat:no-repeat;
   background-position:center center;
   -webkit-background-size: cover;
