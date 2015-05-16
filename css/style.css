@@ -26,10 +26,12 @@ html, body {-webkit-text-size-adjust: 100%;}
 .bold {
 	font-weight:700;
 }
-
 a {
   text-decoration: none;
   color:inherit;
+}
+.topspace {
+    margin-top: 20px;
 }
 
 .section .slide {
@@ -40,7 +42,6 @@ a {
   -o-background-size: cover;
   background-size: cover;
 }
-
 .homeimg {
 	position:absolute;
 	width:100%;
@@ -757,10 +758,15 @@ input[type=submit]::first-letter {
 #impressum h3 {
 	margin-top:50px;
 }
+.next-head {
+	margin-top:30px !important;
+	padding-top:20px;
+	border-top:1px solid #444;
+}
 #impressum p:last-child {
 	margin-bottom:50px;
 }
-#impressum p {
+#impressum p, #impressum ol {
 	margin-bottom:1em;
 	max-width:380px;
 	font-size:90%;
@@ -768,9 +774,31 @@ input[type=submit]::first-letter {
 #impressum p:nth-of-type(5) {
 	margin-top:25px;
 }
-.sub {
+#impressum a {
+    padding: 10px;
+    margin-left: -10px;
+}
+#impressum a:hover {
+	color: rgb(0, 157, 224);
+}
+ol li {
+    margin-bottom: 0.5em;
+}
+.sub, li + ol, li + ul, li + ul + ol {
 	font-size:75% !important;
 	color:#aaa;
+}
+li + ol, li + ul,li + ul + ol {
+	font-size:83% !important;
+}
+li + ul {
+    list-style-type: none;
+}
+.roman {
+    list-style-type: upper-roman;
+}
+.decimal {
+	list-style-type:decimal;
 }
 .karosserie, .karosserie .kontakte {
 	background-color: rgb(175, 26, 28);

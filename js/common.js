@@ -199,11 +199,17 @@
 			$(".b_impressum").on('click', function(){
 				$("#impressum").css("visibility","visible");
 				$("body").css("overflow","hidden").addClass('showImpressum');
+                $.getScript('js/jquery.fullPage-agethen.js',function(){
+                    removeMouseWheelHandler();
+                });
 			});
 
 			$("#closeImpressum").on('click', function(){
 				$("#impressum").css("visibility","hidden");
 				$("body").css("overflow","auto").removeClass('showImpressum');
+                $.getScript('js/jquery.fullPage-agethen.js',function(){
+                    addMouseWheelHandler();
+                });
 			});
 
 	};
