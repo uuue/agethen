@@ -200,7 +200,7 @@
 				$("#impressum").css("visibility","visible");
 				$("body").css("overflow","hidden").addClass('showImpressum');
                 $.getScript('js/jquery.fullPage-agethen.js',function(){
-                    removeMouseWheelHandler();
+                    $('#fullpage').removeMouseWheelHandler();
                 });
 			});
 
@@ -208,7 +208,7 @@
 				$("#impressum").css("visibility","hidden");
 				$("body").css("overflow","auto").removeClass('showImpressum');
                 $.getScript('js/jquery.fullPage-agethen.js',function(){
-                    addMouseWheelHandler();
+                    $('#fullpage').addMouseWheelHandler();
                 });
 			});
 
