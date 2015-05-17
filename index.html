@@ -33,6 +33,34 @@
 <script src="js/modernizr.custom.js"></script>
 <!-- <script type="text/javascript" src="http://www.pgrady.com/scripts/iosbugfix.js"></script>  -->
 <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript">
+$.validator.setDefaults({
+	submitHandler: function() { form.submit(); }
+});
+
+$().ready(function() {
+	// validate the comment form when it is submitted
+	//$("#agethenMail").validate();
+	
+	// validate signup form on keyup and submit
+	$("#agethenMail").validate({
+		rules: {
+			name: "required",
+			mail: {
+				required: true,
+				email: true
+			},
+			message: "required",
+		},
+		messages: {
+			name: "!!",
+			mail: "!! (keine gültige E-Mail-Adresse)",
+			message: "!!",
+		}
+	});	
+});
+</script>
 </head>
 
 <body>

@@ -919,5 +919,14 @@ body.thanks-error p {
 	color: rgb(175, 26, 28);
 }
 
-
+label.error {
+    display: block;
+    font-size: 75%;
+    font-style: italic;
+    color: rgb(175, 26, 28);
+    margin: 5px 5px 10px;
+}
+input.error, textarea.error {
+    background: rgb(175, 26, 28) !important;
+}
 
