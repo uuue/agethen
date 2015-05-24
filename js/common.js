@@ -199,25 +199,13 @@
 			$(".b_impressum").on('click', function(){
 				$("#impressum").css("visibility","visible");
 				$("body").css("overflow","hidden").addClass('showImpressum');
-<<<<<<< HEAD
-                app.$.document.removeMouseWheelHandler();
-=======
-                $.getScript('js/jquery.fullPage-agethen.js',function(){
-                    $('#fullpage').removeMouseWheelHandler();
-                });
->>>>>>> e3a97fa841d8bf1dc4439fbe5abcfdd92f313ce1
+//                app.$.document.removeMouseWheelHandler();
 			});
 
 			$("#closeImpressum").on('click', function(){
 				$("#impressum").css("visibility","hidden");
 				$("body").css("overflow","auto").removeClass('showImpressum');
-<<<<<<< HEAD
-                app.$.window.addMouseWheelHandler();
-=======
-                $.getScript('js/jquery.fullPage-agethen.js',function(){
-                    $('#fullpage').addMouseWheelHandler();
-                });
->>>>>>> e3a97fa841d8bf1dc4439fbe5abcfdd92f313ce1
+//                app.$.window.addMouseWheelHandler();
 			});
 
 	};
