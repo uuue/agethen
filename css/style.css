@@ -929,4 +929,6 @@ label.error {
 input.error, textarea.error {
     background: rgb(175, 26, 28) !important;
 }
-
+#h_text {
+    display: none;
+}
