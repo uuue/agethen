@@ -152,7 +152,7 @@ $nachricht_initiator = "
 </html>
 ";
 
-if( $h_text == ''){
+if( $h_text == '' && $name != '' && $mail != '' && $message != ''){
 	// html gedönse drausmachen
 	$header  = 'MIME-Version: 1.0' . "\r\n";
 	$header .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
